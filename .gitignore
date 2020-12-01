@@ -1,0 +1,4 @@
+config.json
+secrets.json
+htpasswd
+docker-compose.yml

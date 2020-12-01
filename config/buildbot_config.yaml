@@ -1,0 +1,30 @@
+# The build bot works with web hooks. At the moment, only GitHub is supported.
+
+# What port the buildbot will listen on for webhooks from your git provider.
+port: 3000
+
+# URL to your repository. Only HTTPS is supported.
+repositoryURL: "https://github.com/strangedev/test-zettels.git"
+
+# Where the zettels are stored locally. Use this directory here to set 
+# up your external mount point, for example to expose the finished build
+# to a webserver sidecar.
+localRepositoryPath: "/zettels"
+
+# The git provider. At the moment, only GitHub is supported.
+provider: "GitHub"
+
+# Which authentication flow to use.
+# For public repositories, choose "None".
+# For private repositories without 2FA, choose "PasswordFlow".
+# For private repositories with 2FA, choose "PATFlow".
+# PATFlow requires you to obtain a personal access token from your git provider.
+# You'll need to set the appropriate permissions for this token with your provider.
+# If you're using anything other than "None", you'll need to provide credentials
+# through secrets.json!
+authFlow: "None"
+
+# When deploying in k8s or swarm, you may use a secret named "neuron_buildbot"
+# instead of a bind mount to provide credentials.
+# You have to name the secret accordingly: "neuron_buildbot"
+useDockerSecrets: false
