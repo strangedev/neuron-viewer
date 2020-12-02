@@ -49,3 +49,7 @@ This upgrade adds the following features:
 The parameters `username` and `password` have been replaced with an array of `users`.
 
 Each array item is now an object containing a `username` and `password`.
+
+#### `secrets.yaml`
+
+- `patFlowOptions` was renamed to `tokenFlowOptions`
