@@ -28,7 +28,8 @@ with open("./docker-compose.yml", "w") as compose:
     compose.write(template.render(buildbot=buildbot_config, webserver=webserver_config))
 
 with open("./htpasswd", "w") as htpasswd:
-    username = webserver_config["username"]
-    password_hash = hashlib.sha1(webserver_config["password"].encode("ascii")).digest()
-    password_b64 = base64.b64encode(password_hash).decode("ascii")
-    htpasswd.write(f"{username}:{{SHA}}{password_b64}")
+    for user in webserver_config["users"]:
+        username = user["username"]
+        password_hash = hashlib.sha1(user["password"].encode("ascii")).digest()
+        password_b64 = base64.b64encode(password_hash).decode("ascii")
+        htpasswd.write(f"{username}:{{SHA}}{password_b64}\n")
