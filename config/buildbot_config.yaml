@@ -4,11 +4,11 @@
 port: 3000
 
 # URL to your repository. Only HTTPS is supported.
-repositoryURL: "https://github.com/strangedev/test-zettels.git"
+repositoryUrl: "https://github.com/strangedev/test-zettels.git"
 
-# Where the zettels are stored locally. Use this directory here to set 
-# up your external mount point, for example to expose the finished build
-# to a webserver sidecar.
+# Where the zettels are stored locally. You don't have to change this normally.
+# Use this directory here to set up your external mount point, for example to
+# expose the finished build to a sidecar.
 localRepositoryPath: "/zettels"
 
 # The git provider. At the moment, only GitHub is supported.
@@ -17,8 +17,8 @@ provider: "GitHub"
 # Which authentication flow to use.
 # For public repositories, choose "None".
 # For private repositories without 2FA, choose "PasswordFlow".
-# For private repositories with 2FA, choose "PATFlow".
-# PATFlow requires you to obtain a personal access token from your git provider.
+# For private repositories with 2FA, choose "TokenFlow".
+# TokenFlow requires you to obtain a personal access token from your git provider.
 # You'll need to set the appropriate permissions for this token with your provider.
 # If you're using anything other than "None", you'll need to provide credentials
 # through secrets.json!

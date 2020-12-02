@@ -1,6 +1,9 @@
-# What port your neuron is exposed at
+# What port your neuron site is exposed at
 port: 8080
 
 # Simple credentials for http basic auth
-username: my-username
-password: my-password
+users:
+  - username: my-username
+    password: my-password
+  - username: second-user
+    password: super-secure

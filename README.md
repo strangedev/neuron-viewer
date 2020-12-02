@@ -8,10 +8,10 @@
 
 ## Configuration
 
-Adjust `config.yaml` and `secrets.yaml`.
+Adjust the yaml files in `config/`.
 The options are documented there.
 
-Run `pipenv run build_config.py` to generate the configuration from yaml.
+Run `pipenv run python build_config.py` to generate the configuration from yaml.
 
 ## Running
 
