@@ -5,7 +5,7 @@ services:
         ports: 
             - {{ buildbot.port }}:{{ buildbot.port }}
         volumes: 
-            - neuron:{{ buildbot.localRepositoryPath }}/.neuron/output
+            - neuron:{{ buildbot.localRepositoryPath }}
             - ./config.json:/etc/neuron_buildbot/config.json
         {% if not buildbot.useDockerSecrets %}
             - ./secrets.json:/root/.neuron_buildbot/secrets.json
