@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
     app:
         image: docker.pkg.github.com/strangedev/neuron-buildbot/neuron-buildbot:latest
