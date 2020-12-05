@@ -2,6 +2,7 @@ version: '3'
 services:
     app:
         image: docker.pkg.github.com/strangedev/neuron-buildbot/neuron-buildbot:latest
+        init: true
         ports: 
             - {{ buildbot.port }}:{{ buildbot.port }}
         volumes: 
